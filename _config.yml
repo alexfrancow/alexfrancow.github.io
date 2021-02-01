@@ -68,7 +68,7 @@ defaults:
 
 author:
   name: "ALEX FRANCO"
-  avatar: ""
+  avatar: "/images/avatar.png"
   bio: ""
   location: "A Coruña, España"
   links:
