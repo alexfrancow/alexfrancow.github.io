@@ -1,8 +1,18 @@
 ---
-layout: post
+layout: single
 title:  "Welcome to Jekyll!"
 date:   2021-02-01 16:54:50 -0500
 categories: jekyll update
+tags: test
+permalink: /:categories/:title/
+
+header:
+  #overlay_image: /images/cloudflare1/banner.png
+  #overlay_filter: rgba(0, 0, 0, 0.7)
+  # actions:
+  #   - label: "View Code"
+  #     url: "https://github.com/ajpc500/NimExamples/"
+  
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
