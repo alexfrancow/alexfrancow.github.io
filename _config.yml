@@ -69,8 +69,8 @@ defaults:
 author:
   name: "ALEX FRANCO"
   avatar: "/images/avatar.png"
-  bio: ""
-  location: "A Coruña, España"
+  bio: "Cybersecurity Analyst, Machine Learning Hacker and Python developer."
+  location: "A Coruña, Spain"
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
@@ -78,6 +78,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/alexfrancow"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/alexfrancow/"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
