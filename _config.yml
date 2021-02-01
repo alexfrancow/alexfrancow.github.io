@@ -39,6 +39,7 @@ plugins:
   - jekyll-feed
   - jekyll-archives
   - jekyll-include-cache
+  - jemoji
 
 category_archive:
   type: liquid
