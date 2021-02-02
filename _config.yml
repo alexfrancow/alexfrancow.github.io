@@ -47,6 +47,9 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+about_archive:
+  type: liquid
+  path: /about/
 
 minimal_mistakes_skin: "dark"
 
