@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Welcome to Jekyll!"
+title:  "Detect CMS version with Machine Learning Algorithms"
 date:   2021-02-01 16:54:50 -0500
 categories: jekyll update
 tags: test
