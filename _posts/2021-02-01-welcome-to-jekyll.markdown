@@ -86,7 +86,7 @@ wp-admin/js/customize-controls.min.js
 
 If we download that version and the previous 4.7.4 and open the file: wp-includes/js/plupload/handlers.js
 
-<p align="center"><img src="images/1.png" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/CMS_version_detector_PoC/master/images/1.png" /></p>
 
 We see the lines change in that file. It would be necessary to download the total list of files that have been modified or added from version 0 to the last one and check how many lines the .js or .css files have
 
@@ -94,28 +94,28 @@ With python instead of counting the lines we will count the bytes of each .js or
 
 The first test emetel.net vs be-sec.net:
 
-<p align="center"><img src="images/2.png" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/CMS_version_detector_PoC/master/images/2.png" /></p>
 
 We will do a bigger check before continuing:
 In these URLs we have 3 versions that are equal, and just give the same number of bytes in your files:
 
-<p align="center"><img src="images/3.png" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/CMS_version_detector_PoC/master/images/3.png" /></p>
 
 Since the wappalyzer API does not take the versions very well, we will take them out by hand looking in the source code for the <meta> tag that contains the version used:
 
-<p align="center"><img src="images/4.png" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/CMS_version_detector_PoC/master/images/4.png" /></p>
 
 There is a website called PublicWWW that allows us to search for certain code on the websites, that is, we can search for websites that have a certain version of WordPress:
 
-<p align="center"><img src="images/5.png" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/CMS_version_detector_PoC/master/images/5.png" /></p>
 
 Once all the URLs have been downloaded, we will have the following number of websites for each version:
 
-<p align="center"><img height="500" width="400" src="images/6.png" /></p>
+<p align="center"><img height="500" width="400" src="https://raw.githubusercontent.com/alexfrancow/CMS_version_detector_PoC/master/images/6.png" /></p>
 
 Having a total of 172,394 urls which we will export to a csv:
 
-<p align="center"><img height="500" width="500"  src="images/7.png" /></p>
+<p align="center"><img height="500" width="500"  src="https://raw.githubusercontent.com/alexfrancow/CMS_version_detector_PoC/master/images/7.png" /></p>
 
 
 ## Multi-Class Classification algorithms
@@ -135,7 +135,7 @@ We will generate our dataset, for each URL we will make 41 requests (the total n
 
 As this is an I / O program, that is, the bottleneck will be based on what it takes to visit that page and it will not depend so much on the processor we will use the threading method (https://realpython.com/python-concurrency/) :
 
-<p align="center"><img src="images/10.png" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/CMS_version_detector_PoC/master/images/10.png" /></p>
 
 {% highlight python %}
 def get_bytes(url):
