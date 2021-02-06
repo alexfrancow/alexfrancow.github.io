@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Detect CMS version with Machine Learning Algorithms"
+title:  "How to detect any version of CMS with machine learning algorithms (without knowing the source code)"
 date:   2021-02-01 16:54:50 -0500
 categories: develop
 tags: machine-learning
