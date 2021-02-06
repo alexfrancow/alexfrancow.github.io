@@ -2,8 +2,8 @@
 layout: single
 title:  "Detect CMS version with Machine Learning Algorithms"
 date:   2021-02-01 16:54:50 -0500
-categories: jekyll update
-tags: test
+categories: develop
+tags: machine-learning
 permalink: /:categories/:title/
 
 header:
