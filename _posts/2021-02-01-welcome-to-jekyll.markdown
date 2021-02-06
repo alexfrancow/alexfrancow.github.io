@@ -7,8 +7,8 @@ tags: machine-learning
 permalink: /:categories/:title/
 
 header:
-  #overlay_image: /images/cloudflare1/banner.png
-  #overlay_filter: rgba(0, 0, 0, 0.7)
+  overlay_image: /images/cloudflare1/banner.png
+  overlay_filter: rgba(0, 0, 0, 0.7)
    actions:
      - label: "View Code"
        url: "https://github.com/alexfrancow/CMS_version_detector_PoC"
