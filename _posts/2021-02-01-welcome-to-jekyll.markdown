@@ -9,7 +9,7 @@ permalink: /:categories/:title/
 header:
   #overlay_image: /images/cloudflare1/banner.png
   #overlay_filter: rgba(0, 0, 0, 0.7)
-  # actions:
+   actions:
      - label: "View Code"
        url: "https://github.com/alexfrancow/CMS_version_detector_PoC"
   
