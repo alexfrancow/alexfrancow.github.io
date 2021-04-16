@@ -86,6 +86,9 @@ author:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin-in"
       url: "https://www.linkedin.com/in/alexfrancow/"
+    - label: "Email"
+      icon: "fab fa-fw fa-envelope"
+      url: "https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/_others/alejandrofrancovazquez%40gmail.com-public.asc"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
