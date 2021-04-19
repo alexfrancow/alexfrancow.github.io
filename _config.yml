@@ -87,7 +87,7 @@ author:
       icon: "fab fa-fw fa-linkedin-in"
       url: "https://www.linkedin.com/in/alexfrancow/"
     - label: "GPG Public Key"
-      icon: "fas fa-lock"
+      icon: "fas fa-fw fa-lock"
       url: "https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/_others/alejandrofrancovazquez%40gmail.com-public.asc"
 
 # Exclude from processing.
