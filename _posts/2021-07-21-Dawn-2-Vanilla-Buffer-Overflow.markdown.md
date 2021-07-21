@@ -14,7 +14,7 @@ header:
        url: "https://github.com/alexfrancow"
   
 ---
-# Dawn 2
+
 Dawn 2 es una máquina desarrollada por [@whitecr0wz](https://www.vulnhub.com/author/whitecr0wz,630/) que está disponible en vulnhub y que recientemente se ha añadido en [https://portal.offensive-security.com/proving-grounds/play](https://portal.offensive-security.com/proving-grounds/play), la máquina cuenta con un nivel de dificultad intermedia. 
 
 > El link de descarga: [https://www.vulnhub.com/entry/sunset-dawn2,424/](https://www.vulnhub.com/entry/sunset-dawn2,424/)
