@@ -110,12 +110,14 @@ Una vez enviados los bytes se observa que el EIP se sobreescribe con \x41\x41\x4
 El offset el la cantidad de caracteres que se deben enviar antes de sobreescribir el `EIP`. 
 
 ¿Por qué no interesa sobreescribir dicho registro?
+
 El hecho de desbordar el buffer hará sobreescribir algunos registros que no deberían estar siendo almacenados con los valores que nosotros le enviamos.
 El sobrescribir el registro EIP nos hará crashear la aplicación, ya que el programa no será capaz de redirigir bien el flujo, y apuntará a una siguiente dirección de memoria que no existe (0x41414141 = AAAA) dando por resultado la corrupción del programa.
 
 En este punto es interesante encontrar en que momento se está sobrescribiendo el EIP, de esta manera se conocerá el tamaño exacto de buffer que será necesario rellenar con basura ("A" * x) para que en los siguientes caracteres que empezarán a sobrescribir el EIP se pueda redirigir el flujo hacia otra función.
 
 ¿Cómo se calcula el offset?
+
 Para calcular el offset se puede hacer uso de un script llamado `msf-pattern_create` que generará una cadena compuesta de patrones únicos que se pueden emplear para reemplazar la secuencia de 'A's, de modo que el registro EIP será sobreescrito por un conjunto de 4 bytes que aparecerán una unica vez en todo el patrón y este se podrá localizar fácilmente.
 
 Sabiendo el número de bytes que rompe el servicio, en este caso (<>800), se creará el siguiente `pattern`:
