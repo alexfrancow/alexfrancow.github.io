@@ -210,6 +210,8 @@ s.close()
 ```
 <p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210721201618.png" height="500" width="825" /></p>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y8cRUK7jky4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Se puede utilizar el módulo struct para convertir el valor HEX en little-endian y no tener que reversear la dirección poniendola en hexadecimal manualmente:
 > Documentación de la librería struct: [https://docs.python.org/3/library/struct.html](https://docs.python.org/3/library/struct.html)
 
