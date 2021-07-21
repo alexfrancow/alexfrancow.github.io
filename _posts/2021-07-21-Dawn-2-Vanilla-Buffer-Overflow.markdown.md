@@ -204,7 +204,7 @@ s.send(buffer)
 s.close()
 ```
 
-Se puede utulizar el módulo struct para convertir el valor HEX en little-endian y no tener que reversear la dirección poniendola en hexadecimal manualmente:
+Se puede utilizar el módulo struct para convertir el valor HEX en little-endian y no tener que reversear la dirección poniendola en hexadecimal manualmente:
 > Documentación de la librería struct: [https://docs.python.org/3/library/struct.html](https://docs.python.org/3/library/struct.html)
 
 ```python
