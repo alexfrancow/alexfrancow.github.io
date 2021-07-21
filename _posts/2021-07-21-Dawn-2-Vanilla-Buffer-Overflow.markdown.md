@@ -15,12 +15,12 @@ header:
   
 ---
 # Dawn 2
-Dawn 2 es una máquina desarrollada por @[whitecr0wz](https://www.vulnhub.com/author/whitecr0wz,630/) que está disponible en vulnhub y que recientemente se ha añadido en https://portal.offensive-security.com/proving-grounds/play, la máquina cuenta con un nivel de dificultad intermedia. 
+Dawn 2 es una máquina desarrollada por [@whitecr0wz](https://www.vulnhub.com/author/whitecr0wz,630/) que está disponible en vulnhub y que recientemente se ha añadido en [https://portal.offensive-security.com/proving-grounds/play](https://portal.offensive-security.com/proving-grounds/play), la máquina cuenta con un nivel de dificultad intermedia. 
 
-> El link de descarga: https://www.vulnhub.com/entry/sunset-dawn2,424/
+> El link de descarga: [https://www.vulnhub.com/entry/sunset-dawn2,424/](https://www.vulnhub.com/entry/sunset-dawn2,424/)
 
 ## Recon
-Una vez iniciada la máquina se lanza un `nmap` contra la máquina, descubriendo aqui, un puerto 80 HTTP; que mostrará un link de descarga de un binario ```PE32 executable (console) Intel 80386, for MS Windows```, y un puerto 1985 donde el mismo se encuentra a la escucha.
+Una vez iniciada la máquina se lanza un `nmap` contra la máquina, descubriendo aqui, un puerto 80 HTTP; que mostrará un link de descarga de un binario `PE32 executable (console) Intel 80386, for MS Windows`, y un puerto 1985 donde el mismo se encuentra a la escucha.
 
 ```bash
 $ nmap -sC -sV -v -oA nmap/nmap 192.168.58.12
@@ -54,7 +54,7 @@ bcdedit.exe /set {current} nx AlwaysOff
 
 > La instalación de la máquina y su configuración dado que se salen del scope de esta entrada, serán omitidos.
 
-Una vez instalado Immunity debbuger con python2.7 (https://www.immunityinc.com/products/debugger/), se instalará mona:
+Una vez instalado Immunity debbuger con python2.7 [https://www.immunityinc.com/products/debugger/](https://www.immunityinc.com/products/debugger/), se instalará mona:
 
 ```bash
 git clone https://github.com/corelan/mona
