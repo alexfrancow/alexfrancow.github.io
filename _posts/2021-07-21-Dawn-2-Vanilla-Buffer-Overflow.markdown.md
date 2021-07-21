@@ -48,7 +48,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Uno de los primeros pasos para examinar el binario es la preparación de un entorno, el cual consistirá en lavantar una máquina Windows 7 de 32 bits e instalar Immunity Debbuger con Mona (un script en Python que ayudará en la labor de debbuging).
 > En este writeup no se verán métodos de bypass ya que se deshabilitaran protecciones del sistema como; el Data Execution Prevention (DEP) o el Address Space Layout Randomization(ASLR). 
 
-```cmd
+```bash
 bcdedit.exe /set {current} nx AlwaysOff
 ```
 
@@ -56,13 +56,13 @@ bcdedit.exe /set {current} nx AlwaysOff
 
 Una vez instalado Immunity debbuger con python2.7 (https://www.immunityinc.com/products/debugger/), se instalará mona:
 
-```
+```bash
 git clone https://github.com/corelan/mona
 cp mona/mona.py C:\Program Files (x86)\Immunity Inc\Immunity Debugger\PyCommands\mona.py
 ```
 
 Para comprobar que se ha instalado correctamente es posible hacer uso del comando:
-```
+```bash
 !mona
 ```
 
