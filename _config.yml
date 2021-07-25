@@ -74,7 +74,7 @@ defaults:
 author:
   name: "ALEX FRANCO"
   avatar: "/images/avatar.png"
-  bio: "Cybersecurity Analyst, Machine Learning Hacker and Python developer.  <img src='https://www.be-sec.net/wp-content/uploads/2018/11/be-sec.jpg' width='15' height='15'> "
+  bio: "Cybersecurity Analyst, Machine Learning Hacker and Python developer.  <img src='https://www.be-sec.net/wp-content/uploads/2018/11/be-sec.jpg' style='width:25px !important;height:25px !important;>'"
   location: "A Coruña, Spain"
   links:
     - label: "Twitter"
