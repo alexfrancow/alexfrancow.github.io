@@ -86,7 +86,7 @@ author:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin-in"
       url: "https://www.linkedin.com/in/alexfrancow/"
-    - label: "GPG Public Key"
+    - label: "0x4464D4E17E215840"
       icon: "fas fa-fw fa-lock"
       url: "https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/_others/alejandrofrancovazquez%40gmail.com-public.asc"
 
