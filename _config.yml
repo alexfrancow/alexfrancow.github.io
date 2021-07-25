@@ -74,7 +74,7 @@ defaults:
 author:
   name: "ALEX FRANCO"
   avatar: "/images/avatar.png"
-  bio: "Cybersecurity Analyst, Machine Learning Hacker and Python developer.  <img src='https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/be_sec.jpg' style='width:35px !important;height:15px !important;'>"
+  bio: "Cybersecurity Analyst, Machine Learning Hacker and Python developer.  <img src='https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/be_sec.png' style='width:35px !important;height:15px !important;'>"
   location: "A Coruña, Spain"
   links:
     - label: "Twitter"
