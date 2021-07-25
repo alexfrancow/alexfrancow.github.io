@@ -54,7 +54,7 @@ bcdedit.exe /set {current} nx AlwaysOff
 
 > La instalación de la máquina y su configuración dado que se salen del scope de esta entrada, serán omitidos.
 
-Una vez instalado Immunity debbuger con python2.7 [https://www.immunityinc.com/products/debugger/](https://www.immunityinc.com/products/debugger/), se instalará mona:
+Una vez instalado [Immunity debbuger](https://www.immunityinc.com/products/debugger/) con python2.7, se instalará mona:
 
 ```bash
 git clone https://github.com/corelan/mona
