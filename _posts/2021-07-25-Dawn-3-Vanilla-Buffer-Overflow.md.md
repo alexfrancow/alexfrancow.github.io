@@ -102,7 +102,7 @@ Debido a cómo se programan las aplicaciones y cómo funcionan, a veces no toman
 !mona bytearray
 ```
 
-El payload de este script llevará 4 'B's para ver con claridad en que punto empiezan los badchars.
+El payload de este script llevará 4 'B's antes de los badchars y una cola de 'C's para ver con claridad en que punto empiezan y acaban los badchars.
 
 ```python
 badchars = ("\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f\x10"
