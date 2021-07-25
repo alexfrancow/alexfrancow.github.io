@@ -15,7 +15,7 @@ header:
   
 ---
 
-Dawn 3 es la continuación de [Dawn 2](https://alexfrancow.github.io/ctf/Dawn-2-Vanilla-Buffer-Overflow/), desarrollada también por [@whitecr0wz](https://www.vulnhub.com/author/whitecr0wz,630/) que, como la anterior, está disponible en vulnhub y recientemente se ha añadido en [Proving Grounds](https://portal.offensive-security.com/proving-grounds/play](https://portal.offensive-security.com/proving-grounds/play), la máquina cuenta con un nivel de dificultad intermedia.
+Dawn 3 es la continuación de [Dawn 2](https://alexfrancow.github.io/ctf/Dawn-2-Vanilla-Buffer-Overflow/), desarrollada también por [@whitecr0wz](https://www.vulnhub.com/author/whitecr0wz,630/) que, como la anterior, está disponible en vulnhub y recientemente se ha añadido en [Proving Grounds](https://portal.offensive-security.com/proving-grounds/play), la máquina cuenta con un nivel de dificultad intermedia.
 
 ## Recon
 Una vez iniciada la máquina se lanza un `nmap` y se observa que la máquina tiene un puerto abierto, el 2100 FTP, al iniciar sesión con anonymous se comprueba la existencia de un binario que posiblemente sea vulnerable a buffer overflow como en la anterior máquina.
