@@ -1,5 +1,7 @@
 main:
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
+  - title: "🔴 Red Team"
+    url: /categories/#ctf
+  - title: "🔵 Blue Team"
+    url: /tags/
+  - title: "👨🏽‍💻 App Development"
     url: /tags/
