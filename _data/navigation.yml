@@ -1,7 +1,7 @@
 main:
-  - title: ":underage: Red Team"
+  - title: ":red_circle: Red Team"
     url: /categories/#ctf
-  - title: "🔵 Blue Team"
+  - title: ":large_blue_circle: Blue Team"
     url: /tags/
-  - title: "👨🏽‍💻 App Development"
+  - title: ":octocat: App Development"
     url: /tags/
