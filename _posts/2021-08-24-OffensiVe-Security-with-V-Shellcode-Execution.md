@@ -64,7 +64,7 @@ Use Ctrl-C or  exit  to exit, or  help  to see other available commands
 
 Once V is installed, a small code will be developed that writes "Hello World" on the screen.
 
-```v
+```go
 fn main() {
 	println('Hello World')
 }
@@ -94,7 +94,7 @@ To test this functionality, a small code block will be developed that will use t
 
 The `MessageBoxW` function will display a modal dialog box that contains a system icon, a set of buttons, and a brief application-specific message, such as status or error information. This is a simple example of how to import a C library and execute a windows function. 
 
-```v
+```go
 #flag -luser32
 
 fn C.MessageBoxW(voidptr, &u16, &u16, u32) int
@@ -156,7 +156,7 @@ What does it take to run shellcode inside your process memory space?
 
 To achieve this, we need to use the Win32 API to dynamically allocate RWX memory and start a thread pointing to the allocated memory region. The code will be the following:
 
-```v
+```go
 module main
 
 import time
