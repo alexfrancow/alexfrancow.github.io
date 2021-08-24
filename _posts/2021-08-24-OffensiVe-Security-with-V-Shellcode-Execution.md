@@ -26,7 +26,7 @@ The language promotes writing simple and clear code with minimal abstraction.
 
 Despite being simple, V gives the developer a lot of power. Anything you can do in other languages, you can do in V."
 
-> https://github.com/vlang/v/blob/master/doc/docs.md
+> [Vlang-Docs](https://github.com/vlang/v/blob/master/doc/docs.md)
 
 V It is still in its development phase but at this point it is already a more or less functional language, but it is enough to be able to carry out proofs of concept or simple tasks such as that of a network / systems administrator or pentester.
 
