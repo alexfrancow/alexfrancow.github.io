@@ -39,7 +39,7 @@ RandomForestClassifier(bootstrap=True, class_weight=None, criterion='entropy',
 We use the model randomforestmodel.pkl:
 
 ```
-$ python3 deepCMSvdetector.py -m test -u https://emetel.net/
+$ python3 deepCMSvdetector.py -m test -u https://xmxtxl[.]net/
 ```
 
 To generate a new dataset:
@@ -92,7 +92,7 @@ We see the lines change in that file. It would be necessary to download the tota
 
 With python instead of counting the lines we will count the bytes of each .js or .css file, only those on the client side since the .php will not be able to visit them.
 
-The first test emetel.net vs be-sec.net:
+The first test xmxtxl[.]net vs bx-sxc[.]net:
 
 <p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/CMS_version_detector_PoC/master/images/2.png" /></p>
 
@@ -219,7 +219,7 @@ We make the predictions:
 {% highlight python %}
 # Creamos un dataframe en blanco
 df = pd.DataFrame(columns=client)
-create_dataset_to_predict("https://emetel.net/")
+create_dataset_to_predict("https://xmetxl[.]net/")
 X = df.iloc[:, 0:-1].values
 model.predict(X)
 {% endhighlight %}
