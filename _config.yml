@@ -52,7 +52,7 @@ main:
   - title: "About"
     url: /about/
 
-minimal_mistakes_skin: "neon"
+minimal_mistakes_skin: "dark"
 
 breadcrumbs: true  # disabled by default
 
