@@ -28,6 +28,7 @@ url: "https://alexfrancow.github.io" # the base hostname & protocol for your sit
 twitter_username: alexfrancow
 github_username:  alexfrancow
 repository: "alexfrancow/alexfrancow.github.io"
+og_image: "/images/avatar.png"
 
 # logo: "/images/arnie.jpg"
 search: true
