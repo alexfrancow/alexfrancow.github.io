@@ -130,6 +130,8 @@ The other concept that needs to be understood is that the entire virtual memory 
 - **User-Mode**: Virtual memory space reserved for user processes. The Win32 APIs are accessible to running user applications, and they do not actually interact directly with the operating system or CPU, thery are essentially a layer of abstraction over the Windows native API. These APIs are defined in Windows DLL files.
 - **Kernel-Mode**: Virtual memory space reserved for system processes. The Windows native API is considered kernel-mode, in that these APIs are closer to the operating system and underlying hardware. 
 
+The reason for the split, is to protect critical Windows functions from being modified by the user or a user land application. If users were able to directly modify kernel code, it has not only huge security concerns, but also functionality concerns. If critical functions are tampered with, causing unhandled exceptions, it could cause critical errors and cause the system to crash.
+
 <p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2021-08-24-OffensiVe-Security-with-V-Shellcode-Execution/Pasted%20image%2020210824182808.png" height="500" width="825" /></p>
 
 > Kernel32 its at a higher level than ntdll despite the misleading name.
