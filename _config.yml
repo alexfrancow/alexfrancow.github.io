@@ -75,7 +75,7 @@ defaults:
 author:
   name: "ALEX FRANCO"
   avatar: "/images/avatar.png"
-  bio: "Cybersecurity Engineer at <a href='https://www.be-sec.net/'><img src='https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/be-sec.png' style='width:43px !important;height:15px !important; padding-bottom:4px !important;'></a>."  
+  bio: "Cybersecurity Engineer at <a href='https://www.be-sec.net/'><img src='https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/be-sec.png' style='width:43px !important;height:15px !important; padding-bottom:4px !important;'></a>"  
   location: "A Coruña, Spain"
   links:
     - label: "Twitter"
