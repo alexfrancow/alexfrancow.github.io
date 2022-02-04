@@ -90,7 +90,9 @@ author:
     - label: "0x4464D4E17E215840"
       icon: "fas fa-fw fa-lock"
       url: "https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/_others/alejandrofrancovazquez%40gmail.com-public.asc"
-      
+    - label: "Just in case"
+      icon: "fab fa-fw fa-ethereum"
+      url: "https://etherscan.io/address/0xc5E59cae54F53a62daB612041250f503a8B9339c"
 
 
 # Exclude from processing.
