@@ -43,9 +43,8 @@ plugins:
   - jemoji
 
 category_archive:
-  - title: "Posts"
-    type: liquid
-    path: /categories/
+  type: liquid
+  path: /categories/
 tag_archive:
   type: liquid
   path: /tags/
