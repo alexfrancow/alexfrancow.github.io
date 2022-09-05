@@ -148,8 +148,3 @@ v 4_XORShellcode_mod.v
 
 `4_XORShellcode_mod.v` will be compiled with **V** to generate the `4_XORShellcode_mod.exe` executable.
 
-### PoC - Demo
-> The final code can be found in this repository.
- https://github.com/alexfrancow/offensive-vlang/blob/main/2_processHollowing.v
-
-<p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2022-04-25-OffensiVe-Security-with-V-2-Process-Hollowing/2022-02-28 12-52-44.gif" height="500" width="825" /></p>
