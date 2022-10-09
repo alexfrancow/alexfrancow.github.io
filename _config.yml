@@ -75,7 +75,7 @@ defaults:
 author:
   name: "ALEX FRANCO"
   avatar: "/images/avatar.png"
-  bio: "Cybersecurity Engineer at <a href='https://www.be-sec.net/'><img src='https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/be-sec.png' style='width:43px !important;height:15px !important; padding-bottom:4px !important;'></a> <br> <a href='https://www.credly.com/badges/5f160e93-dc65-4df4-9d99-74ee4a960e02/public_url'><img src='https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/certs/oscp.webp' style='width:30px !important;height:30px !important; padding-top:4px !important;'><img src='https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/certs/oswp.webp' style='width:30px !important;height:30px !important; padding-top:4px !important;'></a>"  
+  bio: "Cybersecurity Engineer at <a href='https://www.be-sec.net/'><img src='https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/be-sec.png' style='width:43px !important;height:15px !important; padding-bottom:4px !important;'></a> <br> <a href='https://www.credly.com/badges/5f160e93-dc65-4df4-9d99-74ee4a960e02/public_url'><img src='https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/certs/oscp.webp' style='width:30px !important;height:30px !important; padding-top:4px !important;'></a><a href='https://www.credential.net/22775f54-638d-4eae-8680-9e804acfb461'><img src='https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/certs/oswp.webp' style='width:30px !important;height:30px !important; padding-top:4px !important;'></a>"  
   location: "A Coruña, Spain"
   links:
     - label: "Twitter"
