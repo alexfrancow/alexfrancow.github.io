@@ -1,9 +1,9 @@
 ---
 layout: single
 title:  "OffensiVe Security with V 4 - Caesar"
-date:   2022-11-02 20:54:50 -0500
+date:   2022-11-02 16:54:50 -0500
 categories: app-development
-tags: vlang windows osep
+tags: vlang windows
 permalink: /:categories/:title/
 
 header:
@@ -11,8 +11,7 @@ header:
   overlay_filter: rgba(0, 0, 0, 0.7)
   actions:
      - label: "View Code"
-       url: "https://github.com/alexfrancow/offensive-vlang"
-  
+       url: "https://github.com/alexfrancow/offensive-vlang"  
 ---
 
 In the previous part of this series of posts, the [XOR Cipher](https://alexfrancow.github.io/app-development/OffensiVe-Security-with-V-3-XOR/) was detailed, in this part another **cipher technique** with **Caesar encryption** will be investigated in order to mitigate **AV defenses**.
