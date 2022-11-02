@@ -21,7 +21,7 @@ In the previous part of this series of posts, the [XOR Cipher](https://alexfranc
 
 The **Caesar cipher** was one of the earliest encryption schemes and is very simple. It is categorized as a **substitution cipher** since it substitutes a letter or number by shifting it to the right by the number specified in the key.
 
-```
+```text
 Input Output
 C -> D
 a -> b
