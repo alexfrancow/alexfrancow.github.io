@@ -22,7 +22,7 @@ title: YWxleCdzIGJsb2c=
 # subtitle: "Here's a thing that I did"
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Vaguely informative red team, blue team and machine learning blogs. <a rel="me" href="https://infosec.exchange/@alexfrancow">Mastodon</a>
+  Vaguely informative red team, blue team and machine learning blogs. <a rel='me' href='https://infosec.exchange/@alexfrancow'>Mastodon</a>
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://alexfrancow.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: alexfrancow
