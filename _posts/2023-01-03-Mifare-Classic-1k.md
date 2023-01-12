@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Auditing a MIFARE Classic 1k"
+title:  "Abusing ACR in a MIFARE Classic 1k"
 date:   2023-01-03 16:55:50 -0500
 categories: red-team
 tags: proxmark3
@@ -11,7 +11,7 @@ header:
   overlay_filter: rgba(0, 0, 0, 0.7) 
 ---
 
-## A MIFARE Classic 1K Audit
+## Introduction
 
 Some services today offer loyalty cards in which the seller expects the customer to have reserved money and spend it only on their service. It is surprising how many big companies use these types of insecure cards.
 
@@ -31,12 +31,12 @@ client/proxmark3 /dev/ttyACM0
 
 <p align="center"><img src="https://raw.githubusercontent.com/alexfrancow/alexfrancow.github.io/master/images/2023-01-03-Mifare-Classic-1k/photo_5879631145723869965_y.jpg" height="500" width="825" /></p>
 
-Some of these cards are  `MIFARE Classic 1K`. This is the case of the card to be audited:
+Some of these insecure cards are `MIFARE Classic 1K`. This is the case of the card to be audited.
 - ATQA: `00 04`
 - SAK: `08`
 - ATS: `null`
 
-> The _ATQA_, _SAK_ and _ATS_ values can be used to identify the manufacturer, tag type and application.
+> The `ATQA`, `SAK` and `ATS` values can be used to identify the manufacturer, tag type and application.
 
 In order to get that information with the **proxmark3**.
 ```bash
@@ -114,12 +114,14 @@ pm3 --> trace list
 
 As seen in the previous image, the trailer of each sector contains a `key A` and a `key B`. To be able to read or write some blocks it is necessary to know the keys. In order to do that, there is an attack called **Nested Attack**. A lot of publicly used cards use at least one block encrypted with **default keys**. The **Nested Attack** consists of:
 
-- Authenticate to the block with default key and read tag's `Nt` *(determined by LFSR)*.
-- Authenticate to the same block with default key and read tag's `Nt'` *(determined by LFSR) (this authentication is in an encrypted session)*.
+- Authenticate to the block with **default key** and read tag's `Nt` *(determined by LFSR)*.
+- Authenticate to the same block with **default key** and read tag's `Nt'` *(determined by LFSR) (this authentication is in an encrypted session)*.
 - Compute *timing distance* *(number of LFSR shifts)*.
 - Guess the `Nt` value and authenticate to the different block.
 
 > Linear Feedback Shift Register (LFSR). 
+
+> To perform the **Nested Attack** at least one **default key** needs to work.
 
 ```bash
 # Nested Attack
