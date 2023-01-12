@@ -114,10 +114,10 @@ pm3 --> trace list
 
 As seen in the previous image, the trailer of each sector contains a `key A` and a `key B`. To be able to read or write some blocks it is necessary to know the keys. In order to do that, there is an attack called **Nested Attack**. A lot of publicly used cards use at least one block encrypted with **default keys**. The **Nested Attack** consists of:
 
-- Authenticate to the block with default key and read tag's Nt *(determined by LFSR)*.
-- Authenticate to the same block with default key and read tag's Nt' *(determined by LFSR) (this authentication is in an encrypted session)*.
+- Authenticate to the block with default key and read tag's `Nt` *(determined by LFSR)*.
+- Authenticate to the same block with default key and read tag's `Nt'` *(determined by LFSR) (this authentication is in an encrypted session)*.
 - Compute *timing distance* *(number of LFSR shifts)*.
-- Guess the Nt value and authenticate to the different block.
+- Guess the `Nt` value and authenticate to the different block.
 
 > Linear Feedback Shift Register (LFSR). 
 
