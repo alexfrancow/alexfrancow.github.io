@@ -2,7 +2,7 @@
 layout: single
 title:  "OffensiVe Security with V 3 - XOR"
 date:   2022-07-20 16:54:50 -0500
-categories: app-development
+categories: red-team
 tags: vlang windows
 permalink: /:categories/:title/
 
