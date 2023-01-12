@@ -2,7 +2,7 @@
 layout: single
 title:  "OffensiVe Security with V 2 - Process Hollowing"
 date:   2022-04-25 16:54:50 -0500
-categories: app-development
+categories: red-team
 tags: vlang windows
 permalink: /:categories/:title/
 
