@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Abusing ACR in a MIFARE Classic 1k"
+title:  "Abusing AC in a MIFARE Classic 1k"
 date:   2023-01-03 16:55:50 -0500
 categories: red-team
 tags: proxmark3
@@ -10,8 +10,6 @@ header:
   overlay_image: /images/cloudflare1/banner.png
   overlay_filter: rgba(0, 0, 0, 0.7) 
 ---
-
-## Introduction
 
 Some services today offer loyalty cards in which the seller expects the customer to have reserved money and spend it only on their service. It is surprising how many big companies use these types of insecure cards.
 
