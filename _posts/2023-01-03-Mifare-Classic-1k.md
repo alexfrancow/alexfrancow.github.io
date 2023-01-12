@@ -55,7 +55,7 @@ In order to get that information with the **proxmark3**.
 [+] Valid ISO 14443-A tag found
 ```
 
-> https://www.nxp.com/docs/en/application-note/AN10833.pdf
+> [Datasheet AN10833](https://www.nxp.com/docs/en/application-note/AN10833.pdf)
 
 ## Card Structure
 
@@ -107,8 +107,8 @@ pm3 --> trace list
      161076 |     165748 | Tag |3b  df  a3! 38!                    | aT XOR ks3
 ```
 
-> https://www.cs.bham.ac.uk/~garciaf/publications/Dismantling.Mifare.pdf
-> https://www.nxp.com/docs/en/data-sheet/MF1S50YYX_V1.pdf
+> [Dismantling.Mifare](https://www.cs.bham.ac.uk/~garciaf/publications/Dismantling.Mifare.pdf)
+> [Datasheet MF1S50YYX_V1](https://www.nxp.com/docs/en/data-sheet/MF1S50YYX_V1.pdf)
 
 ## Retrieve keys
 
@@ -279,6 +279,6 @@ It is known that the balance is `0.20 cents` in the `3gHMFDuqT8ParFZEWeYnnyg==00
 
 #### Refs
 
->https://guillaumeplayground.net/proxmark3-hardnested/ 
->https://arkandas.com/blog/mifare_classic_cracking/
->https://hackerwarehouse.tv/product-knowledgebase/proxmark/decrypting-and-emulating-mifare-1k-cards-using-the-rfid-tools-android-app/
+- [proxmark3-hardnested](https://guillaumeplayground.net/proxmark3-hardnested/)
+- [mifare_classic_cracking](https://arkandas.com/blog/mifare_classic_cracking/)
+- [decrypting-mifare-1k](https://hackerwarehouse.tv/product-knowledgebase/proxmark/decrypting-and-emulating-mifare-1k-cards-using-the-rfid-tools-android-app/)
