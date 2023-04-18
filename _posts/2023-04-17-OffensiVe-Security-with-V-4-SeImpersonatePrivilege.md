@@ -50,8 +50,8 @@ HANDLE CreateNamedPipeA(
   [in, optional] LPSECURITY_ATTRIBUTES lpSecurityAttributes
 );
 ```
+> [CreateNamedPipeA function](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-createnamedpipea)
 
-> [CreateNamedPipeA function (winbase.h) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-createnamedpipea)
 
 - Note the name of the *pipe*, which must be in a standardised format and unique in the system (`\\.\pipe\test`).
 - `dwOpenMode`, must describe that the *pipe* is open. In this case it must be specified with a 3, `PIPE_ACCESS_DUPLEX`, to create a bi-directional *pipe*.
@@ -214,13 +214,13 @@ nt authority\network service S-1-5-20
 > SpoolSample.exe localhost localhost/pipe/alex
 ```
 
-> https://github.com/jtmpu/PrecompiledBinaries
+> [PrecompiledBinaries](https://github.com/jtmpu/PrecompiledBinaries)
 
 ## Troubleshooting
 
 To check if the called functions return an error, it is recommended to use the `C.GetLastError()` function, which will return the error code returned by the function. 
 
->https://learn.microsoft.com/en-us/windows/win32/debug/system-error-codes--0-499-
+> [System Error Codes](https://learn.microsoft.com/en-us/windows/win32/debug/system-error-codes--0-499-)
 
 ```go
 h_pipe := C.CreateNamedPipeW("ERRORPIPE", C.PIPE_ACCESS_DUPLEX, 0, 10, 0x1000, 0x1000, 0, voidptr(0))
