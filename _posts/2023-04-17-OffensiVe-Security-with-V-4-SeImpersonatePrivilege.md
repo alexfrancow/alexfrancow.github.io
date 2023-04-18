@@ -14,7 +14,7 @@ header:
        url: "https://github.com/alexfrancow/offensive-vlang"  
 ---
 
-The `SeImpersonatePrivilege` allows any token to be impersonated in order to obtain a reference. This privilege is interesting because the **Network Service**, **Local Service** and the default **IIS** account have it assigned by default.
+`SeImpersonatePrivilege` allows us to impersonate any token for which we can get a reference, or handle.This privilege is interesting because the **Network Service**, **Local Service** and the default **IIS** account have it assigned by default.
 
 > Getting code execution on a web server will often give access to this privilege, and potentially the ability to escalate access.
 
