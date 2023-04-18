@@ -216,6 +216,10 @@ nt authority\network service S-1-5-20
 
 > [PrecompiledBinaries](https://github.com/jtmpu/PrecompiledBinaries)
 
+### Demo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oR7MUZ830CE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Troubleshooting
 
 To check if the called functions return an error, it is recommended to use the `C.GetLastError()` function, which will return the error code returned by the function. 
@@ -256,7 +260,3 @@ ConvertSidToStringSidA
 DuplicateTokenEx
 CreateProcessWithTokenW
 ```
-
-### Demo
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oR7MUZ830CE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
