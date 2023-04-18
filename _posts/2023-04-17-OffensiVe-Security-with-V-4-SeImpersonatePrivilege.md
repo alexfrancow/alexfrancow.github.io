@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "OffensiVe Security with V 5 - Abusing SeImpersonatePrivilege"
-date:   2023-04-18 16:55:50 -0500
+date:   2023-04-17 16:55:50 -0500
 categories: red-team
 tags: vlang windows
 permalink: /:categories/:title/
