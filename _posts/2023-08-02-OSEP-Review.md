@@ -60,7 +60,7 @@ On the third day, the last day, I got up at around 10am and started writing the 
 | 19:18  | Got 10th flag                                          |  10   |
 | 19:52  | Got 11th flag                                          |  11   |
 | 10:00  | Started the report on the third day                    |  11   |
-| 18:00  | Finished - Get up from the computer, my back hurts a lot from sitting for so long, stretch.the exam                                      |  11   |
+| 18:00  | Finished the exam                                      |  11   |
 ```
 
 I received my note 9 days later (including weekend).
@@ -77,7 +77,7 @@ I received my note 9 days later (including weekend).
 - Coffee.
 
 ## Recommended links
-- https://book.hacktricks.xyz/welcome/readme
-- https://steffinstanly.gitbook.io/osep-notes/
-- https://github.com/chvancooten/OSEP-Code-Snippets
-- https://notes.morph3.blog/
+- [https://book.hacktricks.xyz/welcome/readme](https://book.hacktricks.xyz/welcome/readme)
+- [https://steffinstanly.gitbook.io/osep-notes/](https://steffinstanly.gitbook.io/osep-notes/)
+- [https://github.com/chvancooten/OSEP-Code-Snippets](https://github.com/chvancooten/OSEP-Code-Snippets)
+- [https://notes.morph3.blog/](https://notes.morph3.blog/)
