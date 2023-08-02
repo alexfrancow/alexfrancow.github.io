@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "OSEP Review"
-date:   2023-08-02 18:23:50 -0500
+date:   2023-08-01 19:23:50 -0500
 categories: red-team
 tags: osep
 permalink: /:categories/:title/
