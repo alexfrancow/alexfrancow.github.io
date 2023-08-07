@@ -19,24 +19,22 @@ This is the first non-technical post I've written on the blog, and I'm going to 
 In summary, my experience with the certification has been very good, I learnt the concepts of AV evasion and AD exploitation and put them into practice in a very real environment; all the tactics and techniques used could be used in a Red Team scenario.
 
 ## Labs
-There is a lab almost by topic in the book, each of which is designed to serve as practice for each section of the book. There are 6 challenges that put the knowledge from the book into practice, I would recommend doing all of them before the final exam. If you can do them on your own, without any help, you will probably have a chance of passing the exam. The exam is a challenge that cannot be passed by following a guide, so don't be overconfident.
+There is ~one lab per chapter, and the labs are a good way to practise the theory in the book. The labs also contain six different challenges to put you in an exam perspective, I would recommend doing all of them before the final exam. If you can do them on your own, without any help, you will probably have a chance of passing the exam. The exam is a challenge that cannot be passed by following a guide, so don't be overconfident.
 
-> The exam is much more difficult than the [OSCP](https://www.offsec.com/courses/pen-200/), making the OSCP a more than necessary requirement.
+> The exam is much more difficult than the [OSCP](https://www.offsec.com/courses/pen-200/), making the OSCP a more than necessary requirement in my opinion.
 
 ## Exam (~56h)
 I started the exam on the 21st of July at 10:00am, I was there an hour before to make sure that the Kali VM was working properly and to test the two internet connections. 
 
 > In my case, my main Internet line goes down during the day, so it was essential to have a mobile phone that offered a constant access point.
 
-During the morning I was able to get 3 flags (`12:39`, `13:03`, `13:55`), one of them I didn't expect to get so fast and it motivated me a lot. I stopped for lunch at 16:00 and ate in front of the computer. At `18:24` I already had 4 flags. 
-I was stuck on one for a long time until ~20:00, I took a shower and went for a walk with my girlfriend, this time of disconnection helped me a lot because when I arrived at ~21:00 I saw everything with a new vision and a new front opened up for me. I stopped for dinner and at ~21:30 I went back to face the flag I had been stuck on for so long. At `3:23` I got the flag and at `3:45` I had got another one, I documented everything and went to bed at ~5:00, having already got 6 flags. There were only 4 more to go.
+During the first morning I was able to get 3 flags (`12:39`, `13:03`, `13:55`), one of them I didn't expect to get so fast and it motivated me a lot. I stopped for lunch at 16:00 and ate in front of the computer. At `18:24` I already had 4 flags. 
+I was stuck on one for a long time until ~20:00, so I took a shower and went for a walk with my girlfriend, this time of disconnection helped me a lot because when I arrived at ~21:00 I saw everything with a new vision. I stopped for dinner and at ~21:30 and I went back to face the flag I had been stuck on for so long at ~22:15. At `3:23` I got the flag and at `3:45` I had got another one, I documented everything and went to bed at ~5:00, with 6 flags already. There were only 4 more to go.
 
-> I wanted to go to bed knowing that I already had half of the exam.
-
-The second day I started at ~8:00, I hadn't slept much (~3h). During the morning I got 3 more flags, 9 in total (`10:50`, `10:58`, `11:42`), only 1 more to go. I was hoping to get it before lunch, but no way. Finally I didn't eat that day and got the 10th flag at `19:18` in the afternoon, at `19:52` I had the 11th flag in ~33h.
+The second day I started at ~8:00, I hadn't slept much (~3h). During the second morning I got 3 more flags, 9 in total (`10:50`, `10:58`, `11:42`), only 1 more to go. I was hoping to get it before lunch, but no way. Finally I didn't eat that day and got the 10th flag at `19:18` in the afternoon, at `19:52` I had the 11th flag after ~33h.
 After that, I had a good rest on the couch and a quiet dinner before checking that I had everything I needed for the next day's report.
 
-On the third day, the last day, I got up at around 10am and started writing the report, as I already had screenshots and the procedure for each machine written down, I just had to make it pretty and as detailed as possible.
+On the third day, the last day, I got up around 10am and started writing the report, as I had already written down the screenshots and the procedure for each machine, I just needed to make it nice and detailed.
 
 ```python
 | Time   | Event                                                  | Flags |
@@ -69,11 +67,13 @@ I received my note 9 days later (including weekend).
 - In my exam case, there were two ways to complete the exam, if you get stuck in one for too long, go to the other.
 - There are two days for the practical part and one day for the report, so plan your sleep/meal times.
 - Get up from the computer, my back hurts a lot from sitting for so long, stretch your legs.
+- Take notes and screenshots of each step. Personally, I used [Obsidian](https://obsidian.md/) and [Flameshot](https://flameshot.org/).
+- Make a write-up of each challenge and save the commands for a quick search.
 - Don't be afraid to restart the environment, but make sure you have documented how to get access.
 - Use common ports on reverse shells, such as ports 53, 80, 443. Other traffic may be blocked.
 - Test the reverse shells or exploits with simple pings or HTTP requests, the AV may delete the binary/webshell/etc. If it works, try to `upx` the binary or adding some cipher to bypass the AV *(Caesar and XOR ciphers, time delays)*.
-- If you are using a socks tunnel to access another network, use [chisel](https://github.com/jpillora/chisel) and make sure the connection is stable.  `auxiliary/server/socks_proxy`  from Metasploit it's too slow.
-- Have the tools shown in the book compiled and test them in the challenges, you never know if you will use them again.
+- If you are using a socks proxy to access another network, use [chisel](https://github.com/jpillora/chisel) and make sure the connection is stable.  `auxiliary/server/socks_proxy`  from Metasploit it's too slow.
+- Have the tools shown in the book pre-compiled and test them in the challenges.
 - Coffee.
 
 ## Recommended links
