@@ -21,7 +21,7 @@ In summary, my experience with the certification has been very good, I learnt th
 ## Labs
 There is ~one lab per chapter, and the labs are a good way to practise the theory in the book. The labs also contain six different challenges to put you in an exam perspective, I would recommend doing all of them before the final exam. If you can do them on your own, without any help, you will probably have a chance of passing the exam. The exam is a challenge that cannot be passed by following a guide, so don't be overconfident.
 
-> The exam is much more difficult than the [OSCP](https://www.offsec.com/courses/pen-200/), making the OSCP a more than necessary requirement in my opinion.
+> The exam is much harder than the [OSCP](https://www.offsec.com/courses/pen-200/), making the OSCP a more than necessary requirement in my opinion.
 
 ## Exam (~56h)
 I started the exam on the 21st of July at 10:00am, I was there an hour before to make sure that the Kali VM was working properly and to test the two internet connections. 
@@ -34,7 +34,7 @@ I was stuck on one for a long time until ~20:00, so I took a shower and went for
 The second day I started at ~8:00, I hadn't slept much (~3h). During the second morning I got 3 more flags, 9 in total (`10:50`, `10:58`, `11:42`), only 1 more to go. I was hoping to get it before lunch, but no way. Finally I didn't eat that day and got the 10th flag at `19:18` in the afternoon, at `19:52` I had the 11th flag after ~33h.
 After that, I had a good rest on the couch and a quiet dinner before checking that I had everything I needed for the next day's report.
 
-On the third day, the last day, I got up around 10am and started writing the report, as I had already written down the screenshots and the procedure for each machine, I just needed to make it nice and detailed.
+On the third and last day, I got up around 10am and started writing the report, as I had already written down the screenshots and the procedure for each machine, I just needed to make it nice and detailed.
 
 ```python
 | Time   | Event                                                  | Flags |
