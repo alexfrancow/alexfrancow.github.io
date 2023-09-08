@@ -186,10 +186,6 @@ An option to mitigate this type of attack would be to **block the user** if he i
 
 The use of this attack does not have a direct impact on the company, but it could lower its reputation since customers would stop putting money into the machines if they know that they do not return the money or keep it money.
 
-#### Demo
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qcV91zAAMek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 ### CWE-841: Improper Enforcement of Behavioral Workflow
 **CVSS Base Score**: **7.1**
 **CVSS v3.1 Vector**: [AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H&version=3.1)
