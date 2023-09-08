@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Do u want a c0ff33?"
-date:   2023-09-07 19:23:50 -0500
+date:   2023-09-05 19:23:50 -0500
 categories: red-team
 tags: osep
 permalink: /:categories/:title/
